@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+<form action="/calculate" method="post" class="box">
+    <div class="field">
+        <label class="label">Number 1</label>
+        <div class="control">
+            <input class="input" type="number" name="num1" placeholder="Enter first number" required>
+        </div>
+    </div>
+    <div class="field">
+        <label class="label">Number 2</label>
+        <div class="control">
+            <input class="input" type="number" name="num2" placeholder="Enter second number" required>
+        </div>
+    </div>
+    <div class="field">
+        <label class="label">Operation</label>
+        <div class="control">
+            <div class="select">
+                <select name="operation" required>
+                    <option value="add">Addition (+)</option>
+                    <option value="subtract">Subtraction (-)</option>
+                    <option value="multiply">Multiplication (*)</option>
+                    <option value="divide">Division (/)</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="control">
+        <button class="button is-link" type="submit">Calculate</button>
+    </div>
+</form>
+{% endblock %}
